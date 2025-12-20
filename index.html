@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html-css-vue</title>
+    <link rel="stylesheet" href="./assets/css/maha.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- import Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+     
+      <div class="navbar-section shaddow fade h-70" :class="{ 'open' : isOpen}" >
+        <div class="container">
+          <div class="navbar row">
+            <span class="item item-one">
+              <img :src="image" alt="gel" width="70" height="70" />
+            </span>
+
+            <div class="item item-two">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="item item-three">
+              <button class="toggle-btn btn white" @click="isOpen = !isOpen">
+                <span class="icon-bar" :class="{ 'close' : isOpen}"></span>
+                <span class="icon-bar" :class="{ 'close' : isOpen}"></span>
+                <span class="icon-bar" :class="{ 'close' : isOpen}"></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- import App -->
+    <script src="./assets/main.js"></script>
+
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
