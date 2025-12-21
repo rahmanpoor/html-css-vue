@@ -1,0 +1,20 @@
+
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/woff2/IRANYekanX-Regular.woff2") format("woff2"),
+    url("../fonts/woff2/IRANYekanX-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/woff2/IRANYekanX-Bold.woff2") format("woff2"),
+    url("../fonts/woff/IRANYekanX-Bold.woff") format("woff");
+}
