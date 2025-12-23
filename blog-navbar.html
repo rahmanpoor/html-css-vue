@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="خرید لوازم آرایشی اصل با قیمت مناسب، ارسال سریع به سراسر ایران و پشتیبانی ۲۴ ساعته">
+    <meta
+      name="description"
+      content="خرید لوازم آرایشی اصل با قیمت مناسب، ارسال سریع به سراسر ایران و پشتیبانی ۲۴ ساعته"
+    />
 
     <title>html-css-vue</title>
     <!-- import fonts -->
@@ -14,32 +17,38 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="./assets/css/fonts.css" />
     <!-- import css -->
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
   </head>
   <body>
     <div id="app">
       <!-- navbar start -->
       <header class="navbar">
         <div class="navbar__container">
-          <!-- logo -->
-          <div class="navbar__logo">
-            <img
-              src="./assets/images/logo/logo2.svg"
-              alt="لوگو"
-              fetchpriority="high"
-            />
+          <div class="navbar__top">
+            <!-- logo -->
+            <div class="navbar__logo">
+              <img
+                src="./assets/images/logo/logo2.svg"
+                alt="لوگو"
+                fetchpriority="high"
+                width="43"
+                height="32"
+              />
+            </div>
+
+            <!-- toggle -->
+            <button
+              class="navbar__toggle"
+              @click="toggleMenu"
+              aria-label="Toggle navigation"
+              :aria-expanded="isOpen"
+            >
+              <span :class="{open: isOpen}"></span>
+              <span :class="{open: isOpen}"></span>
+              <span :class="{open: isOpen}"></span>
+            </button>
           </div>
-
-          <!-- toggle -->
-          <button class="navbar__toggle" @click="toggleMenu">
-            <span :class="{open: isOpen}"></span>
-            <span :class="{open: isOpen}"></span>
-            <span :class="{open: isOpen}"></span>
-          </button>
-
           <!-- menu -->
           <nav class="navbar__nav" :class="{open: isOpen}">
             <a href="#">خانه</a>
@@ -50,6 +59,10 @@
         </div>
       </header>
       <!-- navbar end -->
+
+      <main id="main-content">
+        <!-- محتوای اصلی صفحه -->
+      </main>
     </div>
 
     <!-- import Vue -->
